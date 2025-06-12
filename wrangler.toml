@@ -1,5 +1,5 @@
 name = "rinconcito-verde"
-main = "src/index.ts"
+main = "dist/index.js"
 compatibility_date = "2025-03-20"
 keep_vars = true
 [observability.logs]
