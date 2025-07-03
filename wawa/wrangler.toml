@@ -1,0 +1,10 @@
+name = "rinconcito-verde"
+main = "dist/index.js"
+compatibility_date = "2025-03-20"
+keep_vars = true
+[observability.logs]
+enabled = true
+[[d1_databases]]
+binding = "DB"
+database_name = "rinconcito-verde"
+database_id = "65efcd2d-9af4-4238-9dc5-9e724546dbf3"

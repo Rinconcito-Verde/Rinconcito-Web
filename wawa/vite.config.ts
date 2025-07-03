@@ -5,6 +5,11 @@ import honox from 'honox/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': new URL('./app', import.meta.url).pathname,
+    },
+  },
   plugins: [
     honox({
       devServer: { adapter },
@@ -12,5 +17,5 @@ export default defineConfig({
     }),
     tailwindcss(),
     build()
-  ]
+  ],
 })

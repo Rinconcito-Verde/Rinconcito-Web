@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "my-app",
+  "main": "./dist/index.js",
+  "compatibility_date": "2025-05-31",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": "./dist"
+  },
+  "keep_vars": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "store_db",
+      "database_id": "5bb9e1d4-90b8-41a8-91aa-4f1f8f07f3c8"
+    }
+  ],
+}
