@@ -2,6 +2,7 @@ name = "rinconcito-verde"
 main = "dist/index.js"
 compatibility_date = "2025-03-20"
 keep_vars = true
+compatibility_flags = ["nodejs_compat"]
 [observability.logs]
 enabled = true
 [[d1_databases]]
