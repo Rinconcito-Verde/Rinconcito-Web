@@ -1,18 +1,13 @@
 import { createRoute } from 'honox/factory'
-import { setC } from '@/context/GlobalC'
-import { Layout } from '@/components/Layout'
-import { Welcome } from '@/components/Welcome'
-import { Card } from '@/components/Card'
-import { getProducts } from '@/context/ProductsContext'
+import Counter from '../islands/counter'
 
-export default createRoute(async (c) => {
-  setC(c)
-  const products = await getProducts()
-  
+export default createRoute((c) => {
+  const name = c.req.query('name') ?? 'Hono'
   return c.render(
-    <Layout>
-      <Welcome/>
-      <Card products={products}/>
-    </Layout>
+    <div class="py-8 text-center">
+      <title>{name}</title>
+      <h1 class="text-3xl font-bold">Hello, {name}!</h1>
+      <Counter />
+    </div>
   )
-}) 
+})
