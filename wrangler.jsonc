@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "rinconcito-verde",
+  "main": "./dist/index.js",
+  "compatibility_date": "2025-05-31",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": "./dist"
+  },
+  "keep_vars": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "rinconcito-verde",
+      "database_id": "65efcd2d-9af4-4238-9dc5-9e724546dbf3"
+    }
+  ],
+}
