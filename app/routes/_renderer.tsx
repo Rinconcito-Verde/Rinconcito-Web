@@ -40,6 +40,11 @@ export default jsxRenderer(({ children }) => {
           button{
             cursor: pointer;
           }
+          @view-transition {
+            navigation: auto;
+            duration: 0.2s;
+            easing: ease-in-out;
+          }
         `}</Style>
         
       </head>
