@@ -7,9 +7,14 @@ import { getProductBySlug } from '@/context/ProductsContext';
 import { setC } from '@/context/GlobalC';
 import AddToCart from '@/islands/addToCart';
 import { formatPrice, priceDiscount } from '@/utils/prices';
+import { cache } from 'hono/cache';
 
 
-export default createRoute(async (c) => {
+export default createRoute(cache({
+    cacheName: 'rinconcito-verde',
+    cacheControl: 'max-age=10800'
+  }),
+  async (c) => {
   setC(c)
   const params = c.req.param();
   const { id, image, name, price, short_description, description, discount, currency } = await getProductBySlug(params.product);
