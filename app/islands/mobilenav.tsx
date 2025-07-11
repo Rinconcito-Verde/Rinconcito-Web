@@ -5,37 +5,6 @@ import { Icon } from "@/components/Icon";
 // Corrige la declaración de categoriesCache y la lógica de caché
 let categoriesCache: any = null;
 
-function NavLinks() {
-    const [categories, setCategories] = useState([]);
-    useEffect(() => {
-        if (categoriesCache) {
-            setCategories(categoriesCache);
-            return;
-        }
-        fetch('/api/categories')
-            .then(res => res.json())
-            .then(data => {
-                categoriesCache = data;
-                setCategories(data as any);
-            });
-    }, []);
-    return (
-        <nav className="flex flex-col md:flex-row gap-8 m-5">
-            <a
-                href="/"
-                className="no-underline text-gray-800 font-bold text-[1rem] transition-colors duration-200 hover:text-green-700"
-            >Home</a>
-            {categories.map((category: any) => (
-                <a
-                    key={category.id}
-                    href={`/${category.slug}`}
-                    className="no-underline text-gray-800 font-bold text-[1rem] transition-colors duration-200 hover:text-green-700"
-                >{category.name}</a>
-            ))}
-        </nav>
-    );
-}
-
 export function MobileNav({ children, onClose }: { children: any; onClose: () => void }) {
     return (
         <div className="min-h-[80dvh] flex flex-col" onClick={onClose}>
@@ -46,7 +15,7 @@ export function MobileNav({ children, onClose }: { children: any; onClose: () =>
         </div>
     );
 }
-export default function MobileNavLogic() {
+export default function MobileNavLogic({ children }: { children: any; }) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   useEffect(() => {
         const handleScroll = () => {
@@ -87,7 +56,7 @@ export default function MobileNavLogic() {
           className="movile-nav-menu-toggle absolute left-0 right-0 top-full w-full shadow-lg rounded-b-xl backdrop-blur-lg border-gray-200 bg-[#a7b67fd0]"
         >
           <MobileNav onClose={() => setMobileNavOpen(!mobileNavOpen)}>
-            <NavLinks />
+           {children}
           </MobileNav>
         </div>
       )}

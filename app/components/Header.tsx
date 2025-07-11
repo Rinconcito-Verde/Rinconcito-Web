@@ -35,7 +35,9 @@ export function Header() {
                 <NavLinks />
             </div>
             <div className="flex">
-                <MobileNavLogic/>
+                <MobileNavLogic>
+                    <NavLinks />
+                </MobileNavLogic>
                 <a
                     href="/carrito"
                     className="flex items-center p-2 rounded-full transition-colors duration-200 text-green-700 text-[1.5rem] hover:bg-green-50"
