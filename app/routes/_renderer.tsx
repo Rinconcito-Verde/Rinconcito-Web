@@ -13,8 +13,23 @@ export default jsxRenderer(({ children }) => {
         <Link href="/app/style.css" rel="stylesheet" />
         <Script src="/app/client.ts" async />
         <title>Rinconcito Verde</title>
-               <Style>{css`
-            body, html {
+        <Style>{css`
+          @font-face {
+            font-family: 'Quicksand';
+            src: url('/fonts/Quicksand-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+          }
+
+          @font-face {
+            font-family: 'Quicksand';
+            src: url('/fonts/Quicksand-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+          }
+          body, html {
             margin: 0;
             padding: 0;
             font-family: Quicksand;
