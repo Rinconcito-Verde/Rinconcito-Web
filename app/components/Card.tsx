@@ -11,7 +11,7 @@ export function Card({products}: { products: [] }) {
   }
   return (
     <div className="max-w-4xl mx-auto py-8 px-4">
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 m">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-6">
         {products.map((product:any) => { 
           const { id, name, price, image, slug, category_slug, short_description, discount, currency } = product;
           const oldPrice = priceDiscount(price, discount);
