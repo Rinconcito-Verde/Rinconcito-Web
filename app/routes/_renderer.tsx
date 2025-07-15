@@ -10,6 +10,7 @@ export default jsxRenderer(({ children }) => {
         <meta name="description" content="Rinconcito Verde - Tu tienda de macetas, semillas y productos de hidroponia." />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/img/favicon.webp" />
+        <link rel="preload" href="/app/style.css" as="style" />
         <Link href="/app/style.css" rel="stylesheet" />
         <Script src="/app/client.ts" async />
         <title>Rinconcito Verde</title>
