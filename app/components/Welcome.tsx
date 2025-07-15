@@ -1,9 +1,14 @@
 export function Welcome() {
     return (
-        <div
-            class="flex flex-row w-full justify-evenly items-center px-8 py-4 top-0 pb-0"
-        >
-            <div class="md:w-[61%]">
+        <div class="relative flex flex-col md:flex-row w-full justify-evenly items-center px-8 py-4 top-0 pb-0">
+            <div class="absolute inset-0 md:hidden z-0 flex justify-center items-start left-[50%] opacity-60">
+                <img
+                    src="/img/welcome.webp"
+                    alt="Welcome Background"
+                    class=" max-w-[200px] object-contain mt-[-160px]"
+                />
+            </div>
+            <div class="md:w-[61%] relative z-10">
                 <h1 class="text-4xl font-bold mb-4">Rinconcito Verde</h1>
                 <p class="text-lg mb-8">
                     Aunque vivas entre paredes, siempre hay un espacio para hacer crecer algo
