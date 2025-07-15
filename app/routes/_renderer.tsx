@@ -33,7 +33,7 @@ export default jsxRenderer(({ children }) => {
           body, html {
             margin: 0;
             padding: 0;
-            font-family: Quicksand;
+            font-family: 'Quicksand', 'Segoe UI', 'Trebuchet MS', 'Helvetica Neue', sans-serif;
             font-size: large;
           }
 
