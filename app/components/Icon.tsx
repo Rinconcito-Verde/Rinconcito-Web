@@ -7,11 +7,10 @@ type IconProps = {
   [key: string]: any;
 };
 
-export function Icon({ icon, className = "", ...props }: IconProps) {
+export function Icon({ icon, ...props }: IconProps) {
   delete props.children;
   return (
     <span
-      className={className}
       {...props}
       dangerouslySetInnerHTML={{ __html: icon }}
     />
