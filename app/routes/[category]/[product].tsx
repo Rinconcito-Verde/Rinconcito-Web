@@ -32,8 +32,8 @@ export default createRoute(cache({
         <div class="flex-[1.2]">
           <h2 class="text-2xl font-bold">{name}</h2>
           <div class="text-green-600 text-xl font-semibold"><span class="line-through text-gray-500 text-base">{oldPrice &&formatPrice(oldPrice, currency)} </span>{formatPrice(price, currency)} {currency}</div>
-          <div class="mt-4 space-x-4 text-green-600 text-sm">
-            <span>✅ Envío gratis</span>
+          <div class="mt-4 space-x-4 text-red-500 font-bold">
+            <span>Este producto no se encuentra disponible para envío a tu país.</span>
           </div>
           <AddToCart id={id} />
         </div>

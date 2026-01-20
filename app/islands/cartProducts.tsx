@@ -199,7 +199,7 @@ export function CartProducts({ addProduct }: any) {
         </div>
         <div className="flex justify-between text-sm">
           <span>Envío</span>
-          <span>Gratis</span>
+          <span class='text-red-600'>Un producto no se encuentra disponible para envío a tu país.</span>
         </div>
         <div className="flex justify-between text-lg font-bold border-t pt-2">
           <span>Total</span>

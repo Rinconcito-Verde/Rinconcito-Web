@@ -169,6 +169,7 @@ export default function Checkout({stripePublicKey}: {stripePublicKey: string}) {
           <div className="text-gray-500">No hay productos en el carrito.</div>
         ) : (
           <>
+          <span class='text-red-600'>Un producto no se encuentra disponible para envío a tu país.</span>
             {checkoutData.items.map((item: any) => (
               <div key={item.id} className="mb-2 border rounded px-4 py-2 flex gap-2 items-center">
                 <img src={item.image} alt={item.name} className="w-12 h-12 object-cover rounded" />
