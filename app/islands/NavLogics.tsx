@@ -55,7 +55,7 @@ export default function NavLogic() {
   }, []);
   return (
       <button
-        className="movile-nav-menu-toggle p-2 rounded-full text-green-700 hover:bg-green-50"
+        className="movile-nav-menu-toggle p-2 rounded-full text-green-700 hover:bg-green-50 md:hidden "
         aria-label="Abrir menú"
         onClick={() => handleOpenMenu()}
       >
