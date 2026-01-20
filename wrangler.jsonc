@@ -2,7 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "rinconcito-verde",
   "main": "./dist/index.js",
-  "compatibility_date": "2025-05-31",
+  "compatibility_date": "2026-01-20",
   "compatibility_flags": [
     "nodejs_compat"
   ],
