@@ -11,7 +11,7 @@ export function Card({products}: { products: [] }) {
   }
   return (
     <div className="max-w-4xl mx-auto py-8 px-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-6">
         {products.map((product:any) => { 
           const { id, name, price, image, slug, category_slug, short_description, discount, currency } = product;
           const oldPrice = priceDiscount(price, discount);
@@ -54,7 +54,7 @@ export function Card({products}: { products: [] }) {
                     href={`/${category_slug}/${slug}`}
                     className="flex-1 border border-[#00000063] text-black hover:bg-[#dbdd7862] px-4 py-2 rounded-md font-medium text-sm transition-colors hidden sm:block text-center"
                   >
-                    Ver detalles
+                   <span class='lg:inline hidden'>Ver</span> detalles
                   </a>
                    <a
                     href={`/carrito?add=${id}`}
