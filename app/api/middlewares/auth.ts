@@ -7,6 +7,7 @@ export async function authMiddleware(c: Context, next: Next) {
     const JwtSecret = c.env.JWT_SECRET
     const jwtMiddleware = jwt({
         secret: JwtSecret,
+        alg: 'HS256'
     })
     return jwtMiddleware(c, next)
 }
